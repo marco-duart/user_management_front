@@ -35,6 +35,13 @@ Cadastro, edição, exclusão, visualização de detalhes de usuários e seus en
    git clone https://github.com/marco-duart/user_management_front.git
    cd user_management_front
    ```
+2. Variáveis de ambiente
+   Criar um arquivo .env na pasta raiz do diretório, ou renomear o .env.example.
+   Preencher com suas variáveis de ambiente ou utilizar as variáveis padrão comentadas no .env.example, também disponíveis abaixo:
+
+   ```bash
+   VITE_API_URL=http://localhost:3000
+   ```
 
 ---
 
