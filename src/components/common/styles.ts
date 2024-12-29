@@ -5,8 +5,6 @@ import { NavLink as RouterNavLink } from "react-router-dom";
 export const Sidebar = styled.div`
   width: 100%;
   height: 100%;
-  top: 0;
-  position: sticky;
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
