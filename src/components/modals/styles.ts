@@ -24,7 +24,7 @@ export const ModalHeader = styled.div`
 
 export const ModalActions = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
   width: 100%;
 

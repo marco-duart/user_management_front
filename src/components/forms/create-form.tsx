@@ -6,6 +6,7 @@ import { z } from "zod";
 import { SuccessModal } from "../modals/success-modal";
 import { useCheck } from "../../hooks/";
 import { cpf as cpfValidator } from "cpf-cnpj-validator";
+import { useNavigate } from "react-router-dom";
 
 const userSchema = z.object({
   name: z.string().min(1, { message: "Nome é obrigatório" }),
@@ -55,6 +56,8 @@ export const CreateForm: React.FC<Props> = ({ onSubmit, loading }) => {
 
   const { checkEmail, checkCpf, emailError, cpfError } = useCheck(false);
 
+  const navigate = useNavigate();
+
   const {
     control,
     handleSubmit,
@@ -82,6 +85,7 @@ export const CreateForm: React.FC<Props> = ({ onSubmit, loading }) => {
 
   const handleModalClose = () => {
     setModalOpen(false);
+    navigate("/users");
   };
 
   return (
