@@ -1,51 +1,76 @@
-# React + TypeScript + Vite
+# User Management FRONT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma plataforma de gerenciamento de usuários desenvolvida com React e Vite, utilizando TypeScript. Esta aplicação integra-se com um backend Rails e utiliza Docker.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+Cadastro, edição, exclusão, visualização de detalhes de usuários e seus endereços e verificação de cpf e email disponivel.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Stack Tecnológico
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Frontend
+
+- **Framework:** React com Vite.
+- **Linguagem:** TypeScript.
+- **Estilização:** Styled-Components e Styled-Icons.
+- **Formulários:** React Hook Form e validação com Zod.
+
+---
+
+## Instalação e Configuração
+
+### Pré-requisitos
+
+- Docker e Docker Compose
+- Backend Rails configurado e em execução
+
+### Instalação do Frontend
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/marco-duart/user_management_front.git
+   cd user_management_front
+   ```
+
+---
+
+## Configuração com Docker
+
+### Iniciando o Ambiente
+
+1. Construa e inicie os contêineres Docker:
+   ```bash
+   docker-compose up --build
+   ```
+
+2. O frontend estará disponível em `http://localhost:5173`.
+
+### Parando o Ambiente
+
+Para parar os contêineres Docker:
+```bash
+docker-compose down
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Principais Bibliotecas
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# user_management_front
+| Biblioteca
+|------------------------|
+| `react`                | 
+| `vite`                 |
+| `react-hook-form`      |
+| `zod`                  |
+| `cpf-cnpj-validator`   |
+| `date-fns`             |
+| `axios`                |
+| `react-router-dom`     |
+| `styled-components`    |
+| `react-modal`          |
+
+---
