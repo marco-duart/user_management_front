@@ -4,7 +4,7 @@ import * as S from "./styles";
 import { FileEdit, Trash, Eye } from "styled-icons/fa-solid";
 import { GetAllUsersDTO, DeleteUserDTO } from "../../services/user/DTO";
 import { format, parseISO } from "date-fns";
-import DeleteConfirmationModal from "../delete-confirmation-modal";
+import { DeleteConfirmationModal } from "../modals/delete-confirmation-modal";
 
 interface UsersTableProps {
   users?: GetAllUsersDTO.IResponse | undefined;

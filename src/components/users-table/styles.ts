@@ -14,36 +14,6 @@ export const Title = styled.h2`
   color: #2c3e50;
 `;
 
-export const SearchContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-`;
-
-export const SearchInput = styled.input`
-  width: 80%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  outline: none;
-  margin-right: 10px;
-`;
-
-export const SearchButton = styled.button`
-  background-color: ${(props) => props.theme.colors.primary};
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-
-  &:hover {
-    background-color: ${(props) => props.theme.colors.primary};
-  }
-`;
-
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
