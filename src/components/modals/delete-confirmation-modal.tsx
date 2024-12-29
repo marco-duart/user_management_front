@@ -8,11 +8,9 @@ interface DeleteConfirmationModalProps {
   onConfirm: () => void;
 }
 
-const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
-  isOpen,
-  onRequestClose,
-  onConfirm,
-}) => {
+export const DeleteConfirmationModal: React.FC<
+  DeleteConfirmationModalProps
+> = ({ isOpen, onRequestClose, onConfirm }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -47,5 +45,3 @@ const DeleteConfirmationModal: React.FC<DeleteConfirmationModalProps> = ({
     </Modal>
   );
 };
-
-export default DeleteConfirmationModal;

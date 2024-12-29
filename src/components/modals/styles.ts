@@ -43,9 +43,9 @@ export const ModalActions = styled.div`
   }
 
   button:last-child {
-    background-color: ${props => props.theme.colors.delete};
+    background-color: ${(props) => props.theme.colors.delete};
     color: white;
-    border: 1px solid ${props => props.theme.colors.delete};
+    border: 1px solid ${(props) => props.theme.colors.delete};
   }
 
   button:hover {
